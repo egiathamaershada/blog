@@ -1,0 +1,67 @@
+body, p,
+.e-text-primary,
+.e-text-banner, .e-text-banner span 
+.e-text-banner-small, .e-text-banner-small span,
+.e-index-menu {
+    font-family: 'Montserrat' , 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+a, div, span, blockquote,
+.e-text-secondary {
+    font-family: 'Quicksand' , Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+}
+
+.e-list-link {
+    font-size: 1.5rem;
+}
+
+.e-list-border {
+    box-sizing: border-box;
+    border: 2px solid #252525;
+}
+.e-card {
+    box-sizing: border-box;
+    border: 2px solid #252525;
+}
+.e-list-border.uk-light, .e-card.uk-light {
+    border-color: #fff;
+}
+.e-card-photo {
+    box-sizing: border-box;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.e-menu {
+    font-size: 2rem;
+}
+
+.e-button-menu {
+    background-color: rgba(193, 193, 193, 0.5);
+    border: none;
+}
+
+.e-text-banner {
+    font-size: 10rem;
+}
+
+.e-text-banner-small {
+    font-size: 5rem;
+}
+
+.e-red {
+    color: #ea193a;
+}
+.e-background-dark {
+    background-color: #252525;
+}
+
+pre.chroma {
+    border: none;
+}
+
+#post iframe,
+#post img {
+    display: block !important;
+    margin: 0 auto !important;
+}

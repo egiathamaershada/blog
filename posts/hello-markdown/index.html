@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    <head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>ethers  | A Plain Markdown Post</title>
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="generator" content="Hugo 0.45-DEV" />
+
+
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+    <link href="/blog/css/dark/uikit.min.css" rel="stylesheet">
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand" rel="stylesheet">
+
+
+<link href="/blog/css/syntax.css" rel="stylesheet">
+<link href="/blog/css/style.css" rel="stylesheet">
+
+    
+    
+<link rel="shortcut icon" href="/blog/images/favicon.jpg" type="image/x-icon" />
+    
+
+
+
+
+<meta property="og:title" content="A Plain Markdown Post" />
+<meta property="og:description" content="This sample post is mainly for blogdown users. If you do not use blogdown, you can skip the first section. To know more about the Hugo XMag theme, please read the About page.
+1. Markdown or R Markdown This is a post written in plain Markdown (*.md) instead of R Markdown (*.Rmd). The major differences are:
+ You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (```{r}); A plain Markdown post is rendered through Blackfriday, and an R Markdown document is compiled by rmarkdown and Pandoc." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/blog/posts/hello-markdown/" />
+
+
+
+<meta property="article:published_time" content="2018-08-03T22:50:16&#43;07:00"/>
+
+<meta property="article:modified_time" content="2018-08-03T22:50:16&#43;07:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="A Plain Markdown Post">
+<meta itemprop="description" content="This sample post is mainly for blogdown users. If you do not use blogdown, you can skip the first section. To know more about the Hugo XMag theme, please read the About page.
+1. Markdown or R Markdown This is a post written in plain Markdown (*.md) instead of R Markdown (*.Rmd). The major differences are:
+ You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (```{r}); A plain Markdown post is rendered through Blackfriday, and an R Markdown document is compiled by rmarkdown and Pandoc.">
+
+
+<meta itemprop="datePublished" content="2018-08-03T22:50:16&#43;07:00" />
+<meta itemprop="dateModified" content="2018-08-03T22:50:16&#43;07:00" />
+<meta itemprop="wordCount" content="609">
+
+
+
+<meta itemprop="keywords" content="blogdown,Markdown,MathJax,Pandoc,RStudio," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A Plain Markdown Post"/>
+<meta name="twitter:description" content="This sample post is mainly for blogdown users. If you do not use blogdown, you can skip the first section. To know more about the Hugo XMag theme, please read the About page.
+1. Markdown or R Markdown This is a post written in plain Markdown (*.md) instead of R Markdown (*.Rmd). The major differences are:
+ You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (```{r}); A plain Markdown post is rendered through Blackfriday, and an R Markdown document is compiled by rmarkdown and Pandoc."/>
+</head>
+    <body class="uk-offcanvas-content">
+        
+        <h6 style="position:fixed;bottom:0;margin:0"></h6>
+        
+        
+    <div>
+        <div class="uk-padding-small" uk-sticky>
+        <button class="uk-padding-small e-button-menu" uk-toggle="target: #offcanvas-menu" ><span uk-icon="menu"></span></button>
+        </div>
+    </div>
+    
+
+    <div id="offcanvas-menu" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+                <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                    <li class="uk-margin-bottom-large e-background-dark"><a href="#"><span class="e-red">et</span>h<span class="e-red">e</span>rs</a></li>
+                    <li>&nbsp;</li>
+                    <li><a class="uk-button uk-button-text e-menu" href="/blog/"><span class="uk-margin-small-right" uk-icon="icon: home"></span>/ Blog /</a></li>
+                    <li><a class="uk-button uk-button-text e-menu" href="/blog/posts"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span>/ Blog Posts /</a></li>
+                    <li><a class="uk-button uk-button-text e-menu" href="https://github.com/egiathamaershada" target="_blank"><span class="uk-margin-small-right" uk-icon="icon: github"></span>Github</a></li>
+                    <li><a class="uk-button uk-button-text e-menu" href="https://egiathamaershada.github.io/"  target="_blank"><span class="uk-margin-small-right" uk-icon="icon: github"></span>Github Page</a></li>
+                    <li><a class="uk-button uk-button-text e-menu" href="https://fb.me/in/egia.thama"  target="_blank"><span class="uk-margin-small-right" uk-icon="icon: facebook"></span>Facebook</a></li>
+                    <li><a class="uk-button uk-button-text e-menu" href="https://www.linkedin.com/in/egiathamaershada"  target="_blank"><span class="uk-margin-small-right" uk-icon="icon: linkedin"></span>Linkedin</a></li>
+                </ul>
+        </div>
+    </div>
+
+
+    
+    
+
+<div id="content">
+<div id="post" class="uk-container uk-margin-medium-bottom uk-text-justify uk-text-break">
+    <h1>A Plain Markdown Post</h1>
+    
+
+<p>This sample post is mainly for <a href="https://github.com/rstudio/blogdown"><strong>blogdown</strong></a> users. If you do not use <strong>blogdown</strong>, you can skip the first section. To know more about the Hugo XMag theme, please read the <a href="/about/">About</a> page.</p>
+
+<h1 id="1-markdown-or-r-markdown">1. Markdown or R Markdown</h1>
+
+<p>This is a post written in plain Markdown (<code>*.md</code>) instead of R Markdown (<code>*.Rmd</code>). The major differences are:</p>
+
+<ol>
+<li>You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (<code>```{r}</code>);</li>
+<li>A plain Markdown post is rendered through <a href="https://gohugo.io/overview/configuration/">Blackfriday</a>, and an R Markdown document is compiled by <a href="http://rmarkdown.rstudio.com"><strong>rmarkdown</strong></a> and <a href="http://pandoc.org">Pandoc</a>.</li>
+</ol>
+
+<p>There are many differences in syntax between Blackfriday&rsquo;s Markdown and Pandoc&rsquo;s Markdown. For example, you can write a task list with Blackfriday but not with Pandoc:</p>
+
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Write an R package.</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Write a book.</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> &hellip;</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Profit!</label></li>
+</ul>
+
+<p>Similarly, Blackfriday does not support LaTeX math and Pandoc does. I have added the MathJax support to this theme (<a href="https://github.com/yihui/hugo-xmag">hugo-xmin</a>) but there is a caveat for plain Markdown posts: you have to include math expressions in a pair of backticks (inline: <code>`$ $`</code>; display style: <code>`$$ $$`</code>), e.g., <code>$S_n = \sum_{i=1}^n X_i$</code>.<sup class="footnote-ref" id="fnref:This-is-because"><a href="#fn:This-is-because">1</a></sup> For R Markdown posts, you do not need the backticks, because Pandoc can identify and process math expressions.</p>
+
+<p>When creating a new post, I recommend you to use the RStudio addin &ldquo;New Post&rdquo;:</p>
+
+<p><img src="https://bookdown.org/yihui/blogdown/images/new-post.png" alt="RStudio addin New Post" /></p>
+
+<h1 id="2-sample-text">2. Sample Text</h1>
+
+<h2 id="second-level-header">Second-level header</h2>
+
+<h3 id="third-level-header">Third-level header</h3>
+
+<h4 id="fourth-level-header">Fourth-level header</h4>
+
+<p>A paragraph (with a footnote):</p>
+
+<p><strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <em>magna aliqua</em>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<sup class="footnote-ref" id="fnref:I-m-sure-you-are"><a href="#fn:I-m-sure-you-are">2</a></sup></p>
+
+<p>A blockquote (a gray bar at the left and lightgray background):</p>
+
+<blockquote>
+<p>Quisque mattis volutpat lorem vitae feugiat. Praesent porta est quis porta imperdiet. Aenean porta, mi non cursus volutpat, mi est mollis libero, id suscipit orci urna a augue. In fringilla euismod lacus, vitae tristique massa ultricies vitae. Mauris accumsan ligula tristique, viverra nulla sed, porta sapien. Vestibulum facilisis nec nisl blandit convallis. Maecenas venenatis porta malesuada. Ut ac erat tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla sodales quam sit amet tincidunt egestas. In et turpis at orci vestibulum ullamcorper. Aliquam sed ante libero. Sed hendrerit arcu lacus.</p>
+</blockquote>
+
+<p>Some code (with a drop-shadow effect):</p>
+
+<pre><code class="language-js">(function() {
+  var quotes = document.getElementsByTagName('blockquote'), i, quote;
+  for (i = 0; i &lt; quotes.length; i++) {
+    quote = quotes[i];
+    var n = quote.children.length;
+    if (n === 0) continue;
+    var el = quote.children[n - 1];
+    if (!el || el.nodeName !== 'P') continue;
+    // right-align a quote footer if it starts with ---
+    if (/^—/.test(el.textContent)) el.style.textAlign = 'right';
+  }
+})();
+</code></pre>
+
+<p>A table (centered by default):</p>
+
+<table>
+<thead>
+<tr>
+<th align="right">Sepal.Length</th>
+<th align="right">Sepal.Width</th>
+<th align="right">Petal.Length</th>
+<th align="right">Petal.Width</th>
+<th align="left">Species</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="right">5.1</td>
+<td align="right">3.5</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+
+<tr>
+<td align="right">4.9</td>
+<td align="right">3.0</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+
+<tr>
+<td align="right">4.7</td>
+<td align="right">3.2</td>
+<td align="right">1.3</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+
+<tr>
+<td align="right">4.6</td>
+<td align="right">3.1</td>
+<td align="right">1.5</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+
+<tr>
+<td align="right">5.0</td>
+<td align="right">3.6</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+
+<tr>
+<td align="right">5.4</td>
+<td align="right">3.9</td>
+<td align="right">1.7</td>
+<td align="right">0.4</td>
+<td align="left">setosa</td>
+</tr>
+</tbody>
+</table>
+
+<p>An image (automatically centered when it is appropriate):</p>
+
+<p><img src="https://slides.yihui.name/gif/happy-elmo.gif" alt="Happy Elmo" /></p>
+
+<p>Looks good?</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:This-is-because">This is because we have to protect the math expressions from being interpreted as Markdown. You may not need the backticks if your math expression does not contain any special Markdown syntax such as underscores or asterisks, but it is always a safer choice to use backticks. When you happen to have a pair of literal dollar signs inside the same element, you can escape one dollar sign, e.g., <code>\$50 and $100</code> renders &ldquo;\$50 and $100&rdquo;. <a class="footnote-return" href="#fnref:This-is-because"><sup>[return]</sup></a></li>
+<li id="fn:I-m-sure-you-are">I&rsquo;m sure you are bored by the text here. <a class="footnote-return" href="#fnref:I-m-sure-you-are"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "egiathamaershada" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+        </div><div class="footer">
+    <h6 class="uk-text-center">
+        &copy; <a href="https://egiathamaershada.github.io">Egia Thama Ershada 2018</a><br/>
+        Developed with <span  class="e-red" uk-icon="heart"></span> by <a href="https://egiathamaershada.github.io"><span class="e-red">et</span>h<span class="e-red">e</span>rs</a>. Powered by <a href="https://gohugo.io/" target="_blank">hugo</a> and <a href="https://getuikit.com/" target="_blank">uikit</a>.
+    </h6>
+</div>
+<script src="/blog/js/uikit.min.js"></script>
+<script src="/blog/js/uikit-icons.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+    <script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
+</html>

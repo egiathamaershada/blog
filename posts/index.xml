@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Articles on ethers</title>
+    <link>http://localhost:1313/blog/posts/</link>
+    <description>Recent content in Articles on ethers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Markdown Here Test</title>
+      <link>http://localhost:1313/blog/posts/markdown-test/</link>
+      <pubDate>Sat, 04 Aug 2018 17:09:47 +0700</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/markdown-test/</guid>
+      <description>H1 H2 H3 H4 H5 H6 Alternatively, for H1 and H2, an underline-ish style:
+Alt-H1 Alt-H2 Emphasis, aka italics, with asterisks or underscores.
+Strong emphasis, aka bold, with asterisks or underscores.
+Combined emphasis with asterisks and underscores.
+Strikethrough uses two tildes. Scratch this.
+ First ordered list item Another item ⋅⋅* Unordered sub-list. Actual numbers don&amp;rsquo;t matter, just that it&amp;rsquo;s a number ⋅⋅1. Ordered sub-list And another item.  ⋅⋅⋅You can have properly indented paragraphs within list items.</description>
+    </item>
+    
+    <item>
+      <title>A Plain Markdown Post</title>
+      <link>http://localhost:1313/blog/posts/hello-markdown/</link>
+      <pubDate>Fri, 03 Aug 2018 22:50:16 +0700</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/hello-markdown/</guid>
+      <description>This sample post is mainly for blogdown users. If you do not use blogdown, you can skip the first section. To know more about the Hugo XMag theme, please read the About page.
+1. Markdown or R Markdown This is a post written in plain Markdown (*.md) instead of R Markdown (*.Rmd). The major differences are:
+ You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (```{r}); A plain Markdown post is rendered through Blackfriday, and an R Markdown document is compiled by rmarkdown and Pandoc.</description>
+    </item>
+    
+  </channel>
+</rss>

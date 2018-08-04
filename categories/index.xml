@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on ethers</title>
+    <link>http://localhost:1313/blog/categories/</link>
+    <description>Recent content in Categories on ethers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://localhost:1313/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Example</title>
+      <link>http://localhost:1313/blog/categories/example/</link>
+      <pubDate>Fri, 03 Aug 2018 22:50:16 +0700</pubDate>
+      
+      <guid>http://localhost:1313/blog/categories/example/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:1313/blog/categories/hugo/</link>
+      <pubDate>Fri, 03 Aug 2018 22:50:16 +0700</pubDate>
+      
+      <guid>http://localhost:1313/blog/categories/hugo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
