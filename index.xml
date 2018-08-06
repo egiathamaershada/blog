@@ -5,11 +5,21 @@
     <link>https://egiathamaershada.github.io/blog/</link>
     <description>Recent content in ethersblog on ethers</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 04 Aug 2018 17:09:47 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 04 Aug 2018 20:29:54 +0700</lastBuildDate>
     
 	<atom:link href="https://egiathamaershada.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>mengenal &#34;gobloging&#34; dan static site generator menggunakan gohugo</title>
+      <link>https://egiathamaershada.github.io/blog/posts/gobloging/</link>
+      <pubDate>Sat, 04 Aug 2018 20:29:54 +0700</pubDate>
+      
+      <guid>https://egiathamaershada.github.io/blog/posts/gobloging/</guid>
+      <description>Masih ingat dengan mimpi saya dulu
+ Bikin aplikasi namanya &amp;ldquo;goblog&amp;rdquo; ah!
+ Mungkin karena waktu itu saya pikir itu nama yang menarik. Saat itu memang bloging sedang booming. Seiring waktu popularitas blog saya rasa semakin menurun. Apalagi jika dibandingkan dengan social media yang menurut saya pribadi tidak terlalu se-social media namanya. Tapi, tidak berarti blog bisa ditinggalkan karena menurut saya blog punya fungsi dan kemampuan yang khusus dan lebih dibanding yang lain.</description>
+    </item>
     
     <item>
       <title>Markdown Here Test</title>
@@ -23,17 +33,6 @@ Strong emphasis, aka bold, with asterisks or underscores.
 Combined emphasis with asterisks and underscores.
 Strikethrough uses two tildes. Scratch this.
  First ordered list item Another item ⋅⋅* Unordered sub-list. Actual numbers don&amp;rsquo;t matter, just that it&amp;rsquo;s a number ⋅⋅1. Ordered sub-list And another item.  ⋅⋅⋅You can have properly indented paragraphs within list items.</description>
-    </item>
-    
-    <item>
-      <title>A Plain Markdown Post</title>
-      <link>https://egiathamaershada.github.io/blog/posts/hello-markdown/</link>
-      <pubDate>Fri, 03 Aug 2018 22:50:16 +0700</pubDate>
-      
-      <guid>https://egiathamaershada.github.io/blog/posts/hello-markdown/</guid>
-      <description>This sample post is mainly for blogdown users. If you do not use blogdown, you can skip the first section. To know more about the Hugo XMag theme, please read the About page.
-1. Markdown or R Markdown This is a post written in plain Markdown (*.md) instead of R Markdown (*.Rmd). The major differences are:
- You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (```{r}); A plain Markdown post is rendered through Blackfriday, and an R Markdown document is compiled by rmarkdown and Pandoc.</description>
     </item>
     
   </channel>

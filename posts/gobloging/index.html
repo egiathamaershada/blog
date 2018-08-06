@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+    <head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>ethers  | mengenal &#34;gobloging&#34; dan static site generator menggunakan gohugo</title>
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="generator" content="Hugo 0.45-DEV" />
+
+
+    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/css/uikit.min.css" integrity="sha256-u0i7lAo5shy1yNdvTqY5Jrk5BygDN3u+MTcJZ0q61nQ=" crossorigin="anonymous" />
+    
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand" rel="stylesheet">
+
+
+<link href="https://egiathamaershada.github.io/blog/css/syntax.css" rel="stylesheet">
+<link href="https://egiathamaershada.github.io/blog/css/style.css" rel="stylesheet">
+
+    
+    
+<link rel="shortcut icon" href="/blog/images/favicon.jpg" type="image/x-icon" />
+    
+
+
+
+
+<meta property="og:title" content="mengenal &#34;gobloging&#34; dan static site generator menggunakan gohugo" />
+<meta property="og:description" content="Gobloging, bloging menggunakan Go. Memanfaatkan gohugo Go static site generator, The world’s fastest framework for building websites" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://egiathamaershada.github.io/blog/posts/gobloging/" />
+
+
+
+<meta property="article:published_time" content="2018-08-04T20:29:54&#43;07:00"/>
+
+<meta property="article:modified_time" content="2018-08-04T20:29:54&#43;07:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="mengenal &#34;gobloging&#34; dan static site generator menggunakan gohugo">
+<meta itemprop="description" content="Gobloging, bloging menggunakan Go. Memanfaatkan gohugo Go static site generator, The world’s fastest framework for building websites">
+
+
+<meta itemprop="datePublished" content="2018-08-04T20:29:54&#43;07:00" />
+<meta itemprop="dateModified" content="2018-08-04T20:29:54&#43;07:00" />
+<meta itemprop="wordCount" content="926">
+
+
+
+<meta itemprop="keywords" content="test," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="mengenal &#34;gobloging&#34; dan static site generator menggunakan gohugo"/>
+<meta name="twitter:description" content="Gobloging, bloging menggunakan Go. Memanfaatkan gohugo Go static site generator, The world’s fastest framework for building websites"/>
+
+    
+</head>
+    <body class="uk-offcanvas-content">
+        
+        <h6 style="position:fixed;bottom:0;margin:0"></h6>
+        
+        
+    <div>
+        <span class="uk-padding-small" uk-sticky>
+            <button class="uk-padding-small e-button-menu" uk-toggle="target: #offcanvas-menu" ><span uk-icon="menu"></span></button>
+        </span>
+    </div>
+
+    <div id="offcanvas-menu" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                <li class="e-background-dark"><a class="e-text-light" href="#"><span class="e-red">et</span>h<span class="e-red">e</span>rs</a></li>
+                <li>&nbsp;</li>
+                <li><a class="uk-button uk-button-text e-menu" href="https://egiathamaershada.github.io/"><span class="uk-margin-small-right" uk-icon="icon: home"></span>/ Blog /</a></li>
+                <li><a class="uk-button uk-button-text e-menu" href="https://egiathamaershada.github.io/blog/posts/"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span>/ Blog Posts /</a></li>
+                <li><a class="uk-button uk-button-text e-menu" href="https://github.com/egiathamaershada" target="_blank"><span class="uk-margin-small-right" uk-icon="icon: github"></span>Github</a></li>
+                <li><a class="uk-button uk-button-text e-menu" href="https://egiathamaershada.github.io/"  target="_blank"><span class="uk-margin-small-right" uk-icon="icon: github"></span>Github Page</a></li>
+                <li><a class="uk-button uk-button-text e-menu" href="https://fb.me/in/egia.thama"  target="_blank"><span class="uk-margin-small-right" uk-icon="icon: facebook"></span>Facebook</a></li>
+                <li><a class="uk-button uk-button-text e-menu" href="https://www.linkedin.com/in/egiathamaershada"  target="_blank"><span class="uk-margin-small-right" uk-icon="icon: linkedin"></span>Linkedin</a></li>
+                <li>&nbsp;</li>
+            </ul><div class="e-footer uk-text-center">
+    <p>
+        <span class="uk-light e-padding-xsmall e-display-inline-block e-margin-xsmall e-background-dark">&copy; <a href="https://egiathamaershada.github.io">Egia Thama Ershada 2018</a></span>
+        <span class="uk-light e-padding-xsmall e-display-inline-block e-margin-xsmall e-background-dark">Developed with <span  class="e-red" uk-icon="heart"></span> by <a href="https://egiathamaershada.github.io"><span class="e-red">et</span>h<span class="e-red">e</span>rs</a></span><br/>
+        <span class="uk-light e-padding-xsmall e-display-inline-block e-margin-xsmall e-background-dark">Powered by <a href="https://gohugo.io/" target="_blank">hugo</a> and <a href="https://getuikit.com/" target="_blank">uikit</a></span><br/>
+    </p>
+</div></div>
+    </div>
+
+
+    
+    
+
+<div id="content">
+<div id="post" class="uk-container uk-container-xsmall uk-margin-medium-bottom uk-text-justify uk-text-break">
+    <h1>mengenal &#34;gobloging&#34; dan static site generator menggunakan gohugo</h1>
+    <hr>
+
+    
+
+<p>Masih ingat dengan mimpi saya dulu</p>
+
+<blockquote>
+<p>Bikin aplikasi namanya &ldquo;<em>goblog</em>&rdquo; ah!</p>
+</blockquote>
+
+<p>Mungkin karena waktu itu saya pikir itu nama yang menarik. Saat itu memang bloging sedang booming. Seiring waktu popularitas blog saya rasa semakin menurun. Apalagi jika dibandingkan dengan <em>social media yang menurut saya pribadi tidak terlalu se-social media</em> namanya. Tapi, tidak berarti blog bisa ditinggalkan karena <em>menurut saya blog punya fungsi dan kemampuan yang khusus dan lebih</em> dibanding yang lain. Di sini saya mengajak semua untuk mengenal <em>gobloging</em>, <em>static site generator</em>, dan <em>gohugo</em>.</p>
+
+<h2 id="apakah-gobloging">Apakah gobloging?</h2>
+
+<p>Ini juga saya tidak tahu. Jujur, itu hanya istilah yang saya buat. 🤣 Gobloging berasal dari 2 kata Go dan bloging. Di sini saya akan membagikan cara bloging menggunakan <a href="https://golang.org/">Go</a>. Sebenarnya, <em>Go <del>hanyalah</del>adalah programming language dari Google</em>. Tools yang akan saya gunakan di sini adalah <em>gohugo, sebuah static site generator yang dibuat menggunakan Go</em>.</p>
+
+<h2 id="apa-itu-static-site-generator">Apa itu static site generator?</h2>
+
+<p><em>Static site generator adalah alat yang dapat membuat (baca: generate) static website dari source code</em>. Kemampuan utama static site generator adalah mampu menghasilkan static website. Berbeda dengan website dynamic yang umumnya melalui proses database atau proses di server, static website langsung memberikan html ke pengunjung. Kita dapat lihat static website unggul dalam kecepatan karena konten dapat langsung disajikan.</p>
+
+<h2 id="kenapa-gohugo-https-gohugo-io">Kenapa <a href="https://gohugo.io/">gohugo</a>?</h2>
+
+<p>Static site generator sebenarnya sudah ada banyak, misalnya: jekyll menggunakan ruby, hexo dan gatsbyjs menggunakan javascript, pelican menggunakan python dan masih banyak lagi. Alasan utama saya memilih gohugo adalah saya tertarik dengan golang, golang mudah digunakan, dan golang memberikan hasil yang bagus di beberapa benchmark dibanding bahasa pemrograman lain. Pada umumnya static site generator memiliki proses yang sama dimana kita membuat template website, lalu kita isi konten umumnya menggunakan markdown, terakhir kita generate versi static. Di sini saya pilih menggunakan gohugo <a href="https://github.com/gohugoio/hugo">versi master dari github</a>. <a href="https://gohugo.io/getting-started/installing/">Instalasi gohugo</a> sangat mudah bahkan bisa langsung digunakan karena hanya berupa single binary application. Tapi saya pribadi jauh lebih memilih menggunakan <a href="https://gohugo.io/getting-started/installing/">source code</a>. Untuk mencobanya dapat langsung <a href="https://gohugo.io/getting-started/quick-start/">mengikuti tutorial</a> yang sangat mudah untuk dilakukan.</p>
+
+<h2 id="pengujian">Pengujian</h2>
+
+<p>Saya mencoba membandingkan gohugo dengan aplikasi blog yang umum digunakan. Untuk membantu, di sini saya menggunakan layanan VPS KVM dari <a href="http://cloudkilat.com/">Cloudkilat</a>. VPS dari cloudkilat saya rasakan memiliki performa yang baik untuk deploy aplikasi. Kenapa KVM, karena disini saya akan memanfaatkan beberapa tools, yaitu: <a href="https://www.docker.com">Docker</a> untuk deployment, <a href="https://prometheus.io/">Prometheus</a>  dan <a href="https://github.com/google/cadvisor">cAdvisor</a> untuk pengukuran, dan <a href="https://grafana.com">Grafana</a> untuk visualisasi. Untuk deployment static website saya menggunakan nginx dan sebagai perbandingan saya menggunakan wordpress. Pengujian saya lakukan beberapa kali dengan menggunakan <a href="https://github.com/wg/wrk">wrk</a>.</p>
+
+<p>Pengujian dilakukan dengan menggunakan parameter <code>-t4 -c100 -d1m</code> yang berarti wrk akan bekerja dengan 4 thread dan 100 koneksi selama 1 menit. Target dari wrk adalah halaman HTML. ada sedikit kesulitan disini karena sulit mengontrol halaman HTML. Berikut beberapa spesifikasi dan kondisi selama pengujian.</p>
+
+<ul>
+<li>Halaman static website berupa artikel sederhana (artikel ini tanpa pengujian dan kesimpulan) yang berukuran <strong>11.96 KB (12,244 bytes)</strong></li>
+<li>Halaman web wordpress hanya hello word &ldquo;sisa&rdquo; install yang berukuran <strong>19.76 KB (20,231 bytes)</strong></li>
+<li>wrk dijalankan dari server dengan <strong>CPU 2 GHz dan memory 2GB</strong></li>
+<li>web berada di server dengan <strong>CPU 2GHz dan memory 4GB</strong></li>
+<li>Pengujian dijalankan <strong>satu per satu</strong></li>
+<li>Selama pengujian wordpress dan static website tetap berjalan</li>
+<li>Selama pengujian ada aplikasi background tetap berjalan</li>
+</ul>
+
+<p>Berikut beberapa hasil pengujian</p>
+
+<h2 id="wrk-t4-c100-d1m-target">wrk -t4 -c100 -d1m <target></h2>
+
+<h3 id="target-nginx-static">target nginx static</h3>
+
+<table>
+<thead>
+<tr>
+<th>Thread Stats</th>
+<th>Avg</th>
+<th>Stdev</th>
+<th>Max</th>
+<th>+/-Stdev</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Latency</td>
+<td>122.79ms</td>
+<td>213.86ms</td>
+<td>1.96s</td>
+<td>89.39%</td>
+</tr>
+
+<tr>
+<td>Req/Sec</td>
+<td>647.10</td>
+<td>205.02</td>
+<td>1.50k</td>
+<td>68.35%</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>154479 requests in 1.00m, 1.80GB read</li>
+<li>Socket errors: connect 0, read 0, write 0, timeout 67</li>
+<li>Requests/sec:   2573.86</li>
+<li>Transfer/sec:     30.66MB</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Thread Stats</th>
+<th>Avg</th>
+<th>Stdev</th>
+<th>Max</th>
+<th>+/-Stdev</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Latency</td>
+<td>105.60ms</td>
+<td>170.18ms</td>
+<td>1.89s</td>
+<td>90.44%</td>
+</tr>
+
+<tr>
+<td>Req/Sec</td>
+<td>646.36</td>
+<td>187.28</td>
+<td>1.36k</td>
+<td>68.36%</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>154406 requests in 1.00m, 1.80GB read</li>
+<li>Socket errors: connect 0, read 0, write 0, timeout 8</li>
+<li>Requests/sec:   2571.96</li>
+<li>Transfer/sec:     30.63MB</li>
+</ul>
+
+<h3 id="target-wordpress">target wordpress</h3>
+
+<table>
+<thead>
+<tr>
+<th>Thread Stats</th>
+<th>Avg</th>
+<th>Stdev</th>
+<th>Max</th>
+<th>+/-Stdev</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Latency</td>
+<td>566.34ms</td>
+<td>197.93ms</td>
+<td>1.97s</td>
+<td>80.91%</td>
+</tr>
+
+<tr>
+<td>Req/Sec</td>
+<td>41.83</td>
+<td>20.45</td>
+<td>151.00</td>
+<td>66.79%</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>9365 requests in 1.00m, 534.38MB read</li>
+<li>Socket errors: connect 0, read 0, write 0, timeout 106</li>
+<li>Requests/sec:    155.90</li>
+<li>Transfer/sec:      8.90MB</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Thread Stats</th>
+<th>Avg</th>
+<th>Stdev</th>
+<th>Max</th>
+<th>+/-Stdev</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Latency</td>
+<td>587.69ms</td>
+<td>180.38ms</td>
+<td>2.00s</td>
+<td>78.98%</td>
+</tr>
+
+<tr>
+<td>Req/Sec</td>
+<td>41.80</td>
+<td>20.00</td>
+<td>190.00</td>
+<td>67.61%</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>9441 requests in 1.00m, 539.01MB read</li>
+<li>Socket errors: connect 0, read 2, write 0, timeout 79</li>
+<li>Requests/sec:    157.13</li>
+<li>Transfer/sec:      8.97MB</li>
+</ul>
+
+<h2 id="mmmm">Mmmm&hellip; 🤔</h2>
+
+
+
+
+
+    
+    
+    
+    <div uk-lightbox>
+        <a href="/blog/images/goblogin-grafana-test-network-output.jpg" data-caption="Container Network Output. Banyaknya data yang keluar.">
+            <img class="uk-width-1-1" data-src="/blog/images/goblogin-grafana-test-network-output_hu1af97dc4b31e64d2477fc014b1a009e8_115114_1280x360_resize_q90_lanczos.jpg" alt="Container Network Output. Banyaknya data yang keluar." uk-img/>
+        </a>
+        <p class="uk-text-center uk-margin-remove-top">Container Network Output. Banyaknya data yang keluar.</p>
+    </div>
+    
+    
+
+
+
+
+
+
+
+
+    
+    
+    
+    <div uk-lightbox>
+        <a href="/blog/images/gobloging-grafana-test-network-input.jpg" data-caption="Container Network Input. Banyaknya data yang masuk.">
+            <img class="uk-width-1-1" data-src="/blog/images/gobloging-grafana-test-network-input_hu78bc6e9f5b4a39b78a37bd21bc53b264_104454_1280x360_resize_q90_lanczos.jpg" alt="Container Network Input. Banyaknya data yang masuk." uk-img/>
+        </a>
+        <p class="uk-text-center uk-margin-remove-top">Container Network Input. Banyaknya data yang masuk.</p>
+    </div>
+    
+    
+
+
+
+
+
+
+
+
+    
+    
+    
+    <div uk-lightbox>
+        <a href="/blog/images/gobloging-grafana-test-memory.jpg" data-caption="Container Memory. Penggunaan memori.">
+            <img class="uk-width-1-1" data-src="/blog/images/gobloging-grafana-test-memory_hu051b047a39a247027f75e7afb6302564_124962_1280x360_resize_q90_lanczos.jpg" alt="Container Memory. Penggunaan memori." uk-img/>
+        </a>
+        <p class="uk-text-center uk-margin-remove-top">Container Memory. Penggunaan memori.</p>
+    </div>
+    
+    
+
+
+
+
+<h2 id="jadi">Jadi??</h2>
+
+<p>Pengujian jelas harus dilakukan dengan lebih baik dan lebih banyak data. Pengujian ini belum bisa menjadi patokan untuk memilih tapi dapat menjadi gambaran kemampuan yang dapat diberikan. Harus diingat halaman wordpress lebih besar, halaman static website bahkan hanya 60.52% dari halaman wordpress. Static website juga <strong>memanfaatkan CDN untuk beberapa asset yang besar</strong>. Dari beberapa test dapat dilihat static website dapat menangani lebih banyak request. Penggunaan memory static website jauh lebih kecil karena hanya menggunakan web server nginx. Akhirnya <strong>yang lebih baik tetap ada di kebutuhan dan pilihan masing - masing</strong>. Menurut saya, bloging platform jelas memiliki banyak fitur tetapi static website jauh lebih efisien dalam menggunakan resource.</p>
+
+<h2 id="extra">Extra</h2>
+
+<p>Saya mencoba melakukan pengujian pada static website setelah ukuran artikel meningkat sampai 16.64 KB (17,035 bytes) setelah penambahan sampai kesimpulan. Ukuran halaman menjadi 84.20% dari halaman wordpress.</p>
+
+<table>
+<thead>
+<tr>
+<th>Thread Stats</th>
+<th>Avg</th>
+<th>Stdev</th>
+<th>Max</th>
+<th>+/-Stdev</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Latency</td>
+<td>147.20ms</td>
+<td>235.79ms</td>
+<td>2.00s</td>
+<td>88.62%</td>
+</tr>
+
+<tr>
+<td>Req/Sec</td>
+<td>376.15</td>
+<td>129.61</td>
+<td>1.02k</td>
+<td>69.13%</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>89807 requests in 1.00m, 1.45GB read</li>
+<li>Socket errors: connect 0, read 0, write 0, timeout 76</li>
+<li>Requests/sec:   1496.02</li>
+<li>Transfer/sec:     24.66MB</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Thread Stats</th>
+<th>Avg</th>
+<th>Stdev</th>
+<th>Max</th>
+<th>+/-Stdev</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Latency</td>
+<td>146.28ms</td>
+<td>232.51ms</td>
+<td>1.99s</td>
+<td>88.53%</td>
+</tr>
+
+<tr>
+<td>Req/Sec</td>
+<td>378.16</td>
+<td>129.19</td>
+<td>0.90k</td>
+<td>69.58%</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>90364 requests in 1.00m, 1.45GB read</li>
+<li>Socket errors: connect 0, read 0, write 0, timeout 66</li>
+<li>Requests/sec:   1505.61</li>
+<li>Transfer/sec:     24.82MB</li>
+</ul>
+
+<p>Dapat dilihat peningkatan ukuran halaman menurunkan stat. Untuk memperbaiki pengujian, ukuran halaman HTML static website idealnya harus sama dengan wordpress atau setidaknya mendekati.</p>
+
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "egiathamaershada" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+        </div><div class="e-footer uk-text-center">
+    <p>
+        <span class="uk-light e-padding-xsmall e-display-inline-block e-margin-xsmall e-background-dark">&copy; <a href="https://egiathamaershada.github.io">Egia Thama Ershada 2018</a></span>
+        <span class="uk-light e-padding-xsmall e-display-inline-block e-margin-xsmall e-background-dark">Developed with <span  class="e-red" uk-icon="heart"></span> by <a href="https://egiathamaershada.github.io"><span class="e-red">et</span>h<span class="e-red">e</span>rs</a></span><br/>
+        <span class="uk-light e-padding-xsmall e-display-inline-block e-margin-xsmall e-background-dark">Powered by <a href="https://gohugo.io/" target="_blank">hugo</a> and <a href="https://getuikit.com/" target="_blank">uikit</a></span><br/>
+    </p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit.min.js" integrity="sha256-DfGMpVe3jY4YBjztLyj6h0XnFAkVy19izXbFjF5C3kI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit-icons.min.js" integrity="sha256-06dWgY43Uxg6g7biNZeMClfGlgPkuZcaylT9hj1pe3M=" crossorigin="anonymous"></script>
+
+
+<script src="https://egiathamaershada.github.io/blog/js/script.js"></script>
+    </body>
+</html>

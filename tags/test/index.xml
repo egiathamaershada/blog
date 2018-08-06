@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Test on ethers</title>
+    <link>https://egiathamaershada.github.io/blog/tags/test/</link>
+    <description>Recent content in Test on ethers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 04 Aug 2018 20:29:54 +0700</lastBuildDate>
+    
+	<atom:link href="https://egiathamaershada.github.io/blog/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mengenal &#34;gobloging&#34; dan static site generator menggunakan gohugo</title>
+      <link>https://egiathamaershada.github.io/blog/posts/gobloging/</link>
+      <pubDate>Sat, 04 Aug 2018 20:29:54 +0700</pubDate>
+      
+      <guid>https://egiathamaershada.github.io/blog/posts/gobloging/</guid>
+      <description>Masih ingat dengan mimpi saya dulu
+ Bikin aplikasi namanya &amp;ldquo;goblog&amp;rdquo; ah!
+ Mungkin karena waktu itu saya pikir itu nama yang menarik. Saat itu memang bloging sedang booming. Seiring waktu popularitas blog saya rasa semakin menurun. Apalagi jika dibandingkan dengan social media yang menurut saya pribadi tidak terlalu se-social media namanya. Tapi, tidak berarti blog bisa ditinggalkan karena menurut saya blog punya fungsi dan kemampuan yang khusus dan lebih dibanding yang lain.</description>
+    </item>
+    
+  </channel>
+</rss>

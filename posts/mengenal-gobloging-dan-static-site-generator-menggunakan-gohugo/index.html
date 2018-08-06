@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>ethers  | mengenal &#34;gobloging&#34; dan static site generator menggunakan gohugo</title>
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="generator" content="Hugo 0.45-DEV" />
+
+
+    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/css/uikit.min.css" integrity="sha256-u0i7lAo5shy1yNdvTqY5Jrk5BygDN3u+MTcJZ0q61nQ=" crossorigin="anonymous" />
+    
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand" rel="stylesheet">
+
+
+<link href="https://egiathamaershada.github.io/blog/css/syntax.css" rel="stylesheet">
+<link href="https://egiathamaershada.github.io/blog/css/style.css" rel="stylesheet">
+
+    
+    
+<link rel="shortcut icon" href="/blog/images/favicon.jpg" type="image/x-icon" />
+    
+
+
+
+
+<meta property="og:title" content="mengenal &#34;gobloging&#34; dan static site generator menggunakan gohugo" />
+<meta property="og:description" content="Masih ingat dengan mimpi saya dulu
+ Bikin aplikasi namanya &ldquo;goblog&rdquo; ah!
+ Alasannya apa?? saya juga lupa kenapa. Mungkin karena waktu itu saya pikir itu nama yang menarik. Saat itu memang bloging sedang booming. Seiring waktu popularitas blog saya rasa semakin menurun. Apalagi jika dibandingkan dengan social media yang menurut saya pribadi tidak terlalu se-social media namanya. Tapi, tidak berarti blog bisa ditinggalkan karena menurut saya blog punya fungsi dan kemampuan yang khusus dan lebih dibanding yang lain." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://egiathamaershada.github.io/blog/posts/mengenal-gobloging-dan-static-site-generator-menggunakan-gohugo/" />
+
+
+
+<meta property="article:published_time" content="2018-08-04T20:29:54&#43;07:00"/>
+
+<meta property="article:modified_time" content="2018-08-04T20:29:54&#43;07:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="mengenal &#34;gobloging&#34; dan static site generator menggunakan gohugo">
+<meta itemprop="description" content="Masih ingat dengan mimpi saya dulu
+ Bikin aplikasi namanya &ldquo;goblog&rdquo; ah!
+ Alasannya apa?? saya juga lupa kenapa. Mungkin karena waktu itu saya pikir itu nama yang menarik. Saat itu memang bloging sedang booming. Seiring waktu popularitas blog saya rasa semakin menurun. Apalagi jika dibandingkan dengan social media yang menurut saya pribadi tidak terlalu se-social media namanya. Tapi, tidak berarti blog bisa ditinggalkan karena menurut saya blog punya fungsi dan kemampuan yang khusus dan lebih dibanding yang lain.">
+
+
+<meta itemprop="datePublished" content="2018-08-04T20:29:54&#43;07:00" />
+<meta itemprop="dateModified" content="2018-08-04T20:29:54&#43;07:00" />
+<meta itemprop="wordCount" content="385">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="mengenal &#34;gobloging&#34; dan static site generator menggunakan gohugo"/>
+<meta name="twitter:description" content="Masih ingat dengan mimpi saya dulu
+ Bikin aplikasi namanya &ldquo;goblog&rdquo; ah!
+ Alasannya apa?? saya juga lupa kenapa. Mungkin karena waktu itu saya pikir itu nama yang menarik. Saat itu memang bloging sedang booming. Seiring waktu popularitas blog saya rasa semakin menurun. Apalagi jika dibandingkan dengan social media yang menurut saya pribadi tidak terlalu se-social media namanya. Tapi, tidak berarti blog bisa ditinggalkan karena menurut saya blog punya fungsi dan kemampuan yang khusus dan lebih dibanding yang lain."/>
+
+    
+</head>
+    <body class="uk-offcanvas-content">
+        
+        <h6 style="position:fixed;bottom:0;margin:0"></h6>
+        
+        
+    <div>
+        <span class="uk-padding-small" uk-sticky>
+            <button class="uk-padding-small e-button-menu" uk-toggle="target: #offcanvas-menu" ><span uk-icon="menu"></span></button>
+        </span>
+    </div>
+
+    <div id="offcanvas-menu" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                <li class="e-background-dark"><a class="e-text-light" href="#"><span class="e-red">et</span>h<span class="e-red">e</span>rs</a></li>
+                <li>&nbsp;</li>
+                <li><a class="uk-button uk-button-text e-menu" href="https://egiathamaershada.github.io/"><span class="uk-margin-small-right" uk-icon="icon: home"></span>/ Blog /</a></li>
+                <li><a class="uk-button uk-button-text e-menu" href="https://egiathamaershada.github.io/blog/posts/"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span>/ Blog Posts /</a></li>
+                <li><a class="uk-button uk-button-text e-menu" href="https://github.com/egiathamaershada" target="_blank"><span class="uk-margin-small-right" uk-icon="icon: github"></span>Github</a></li>
+                <li><a class="uk-button uk-button-text e-menu" href="https://egiathamaershada.github.io/"  target="_blank"><span class="uk-margin-small-right" uk-icon="icon: github"></span>Github Page</a></li>
+                <li><a class="uk-button uk-button-text e-menu" href="https://fb.me/in/egia.thama"  target="_blank"><span class="uk-margin-small-right" uk-icon="icon: facebook"></span>Facebook</a></li>
+                <li><a class="uk-button uk-button-text e-menu" href="https://www.linkedin.com/in/egiathamaershada"  target="_blank"><span class="uk-margin-small-right" uk-icon="icon: linkedin"></span>Linkedin</a></li>
+                <li>&nbsp;</li>
+            </ul><div class="e-footer uk-text-center">
+    <p>
+        <span class="uk-light e-padding-xsmall e-display-inline-block e-margin-xsmall e-background-dark">&copy; <a href="https://egiathamaershada.github.io">Egia Thama Ershada 2018</a></span>
+        <span class="uk-light e-padding-xsmall e-display-inline-block e-margin-xsmall e-background-dark">Developed with <span  class="e-red" uk-icon="heart"></span> by <a href="https://egiathamaershada.github.io"><span class="e-red">et</span>h<span class="e-red">e</span>rs</a></span><br/>
+        <span class="uk-light e-padding-xsmall e-display-inline-block e-margin-xsmall e-background-dark">Powered by <a href="https://gohugo.io/" target="_blank">hugo</a> and <a href="https://getuikit.com/" target="_blank">uikit</a></span><br/>
+    </p>
+</div></div>
+    </div>
+
+
+    
+    
+
+<div id="content">
+<div id="post" class="uk-container uk-container-xsmall uk-margin-medium-bottom uk-text-justify uk-text-break">
+    <h1>mengenal &#34;gobloging&#34; dan static site generator menggunakan gohugo</h1>
+    <hr>
+
+    <p>Masih ingat dengan mimpi saya dulu</p>
+
+<blockquote>
+<p>Bikin aplikasi namanya &ldquo;<em>goblog</em>&rdquo; ah!</p>
+</blockquote>
+
+<p>Alasannya apa?? saya juga lupa kenapa. Mungkin karena waktu itu saya pikir itu nama yang menarik. Saat itu memang bloging sedang booming. Seiring waktu popularitas blog saya rasa semakin menurun. Apalagi jika dibandingkan dengan <em>social media yang menurut saya pribadi tidak terlalu se-social media</em> namanya. Tapi, tidak berarti blog bisa ditinggalkan karena <em>menurut saya blog punya fungsi dan kemampuan yang khusus dan lebih</em> dibanding yang lain. Di sini saya mengajak semua untuk mengenal <em>gobloging</em>, <em>static site generator</em>, dan <em>gohugo</em>.</p>
+
+<p>Apakah gobloging? ini juga saya tidak tahu. Jujur, itu hanya istilah yang saya buat. 🤣 Gobloging saya buat berasal dari 2 kata, yaitu Go dan bloging. Di sini saya akan membagikan cara bloging menggunakan <a href="https://golang.org/">Go</a>. Sebenarnya, <em>Go <del>hanyalah</del>adalah programming language dari Google</em>. Tools yang akan saya gunakan di sini adalah <em>gohugo, sebuah static site generator yang dibuat menggunakan Go</em>.</p>
+
+<p>Apa itu static site generator? <em>Static site generator adalah alat yang dapat membuat (baca: generate) static website dari source code</em>. Kemampuan utama static site generator adalah mampu menghasilkan static website. Berbeda dengan website pada umumnya yang dynamic melalui proses database atau proses di server, static website langsung memberikan html ke pengunjung. Kita dapat lihat static website unggul dalam kecepatan. Masalah yang dapat langsung kita lihat adalah, static website jelas tidak dynamic. Di sini static site generator bekerja.</p>
+
+<p>Kenapa <a href="https://gohugo.io/">gohugo</a>? Static site generator sebenarnya sudah ada banyak, misalnya: jekyll menggunakan ruby, hexo dan gatsbyjs menggunakan javascript, pelican menggunakan python dan masih banyak lagi. Alasan utama saya memilih gohugo adalah saya tertarik dengan golang, golang mudah digunakan, dan golang memberikan hasil yang bagus di beberapa benchmark dibanding bahasa pemrograman lain. Pada umumnya static site generator memiliki proses yang sama dimana kita membuat template website, lalu kita isi konten, terakhir kita generate versi statik.</p>
+
+<p>Di sini saya menggunakan gohugo <a href="https://github.com/gohugoio/hugo">versi master dari github</a>. <a href="https://gohugo.io/getting-started/installing/">Instalasi gohugo</a> sangat mudah bahkan bisa langsung digunakan karena hanya berupa single binary application. Tapi saya pribadi jauh lebih memilih menggunakan <a href="https://gohugo.io/getting-started/installing/">source code</a>. Untuk mencobanya dapat langsung <a href="https://gohugo.io/getting-started/quick-start/">mengikuti tutorial</a> yang sangat mudah untuk dilakukan.</p>
+
+<p>Untuk tes, saya akan mencoba membandingkan gohugo dengan aplikasi blog yang umum digunakan. Untuk menbantu, di sini saya menggunakan layanan VPS KVM dari <a href="http://cloudkilat.com/">Cloudkilat</a>. Kenapa KVM, karena disini saya akan memanfaatkan <a href="https://www.docker.com">Docker</a> untuk deployment dan <a href="https://prometheus.io/">Prometeheus</a> untuk pengukuran, dan <a href="https://grafana.com">Grafana</a> untuk visualisasi.</p>
+
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "egiathamaershada" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+        </div><div class="e-footer uk-text-center">
+    <p>
+        <span class="uk-light e-padding-xsmall e-display-inline-block e-margin-xsmall e-background-dark">&copy; <a href="https://egiathamaershada.github.io">Egia Thama Ershada 2018</a></span>
+        <span class="uk-light e-padding-xsmall e-display-inline-block e-margin-xsmall e-background-dark">Developed with <span  class="e-red" uk-icon="heart"></span> by <a href="https://egiathamaershada.github.io"><span class="e-red">et</span>h<span class="e-red">e</span>rs</a></span><br/>
+        <span class="uk-light e-padding-xsmall e-display-inline-block e-margin-xsmall e-background-dark">Powered by <a href="https://gohugo.io/" target="_blank">hugo</a> and <a href="https://getuikit.com/" target="_blank">uikit</a></span><br/>
+    </p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit.min.js" integrity="sha256-DfGMpVe3jY4YBjztLyj6h0XnFAkVy19izXbFjF5C3kI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit-icons.min.js" integrity="sha256-06dWgY43Uxg6g7biNZeMClfGlgPkuZcaylT9hj1pe3M=" crossorigin="anonymous"></script>
+
+
+<script src="https://egiathamaershada.github.io/blog/js/script.js"></script>
+    </body>
+</html>

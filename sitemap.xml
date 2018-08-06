@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://egiathamaershada.github.io/blog/posts/markdown-test/</loc>
-    <lastmod>2018-08-04T17:09:47+07:00</lastmod>
+    <loc>https://egiathamaershada.github.io/blog/posts/gobloging/</loc>
+    <lastmod>2018-08-04T20:29:54+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://egiathamaershada.github.io/blog/posts/hello-markdown/</loc>
-    <lastmod>2018-08-03T22:50:16+07:00</lastmod>
+    <loc>https://egiathamaershada.github.io/blog/posts/markdown-test/</loc>
+    <lastmod>2018-08-04T17:09:47+07:00</lastmod>
   </url>
   
   <url>
@@ -18,61 +18,30 @@
   </url>
   
   <url>
-    <loc>https://egiathamaershada.github.io/blog/tags/blogdown/</loc>
-    <lastmod>2018-08-03T22:50:16+07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://egiathamaershada.github.io/blog/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://egiathamaershada.github.io/blog/categories/example/</loc>
-    <lastmod>2018-08-03T22:50:16+07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://egiathamaershada.github.io/blog/categories/hugo/</loc>
-    <lastmod>2018-08-03T22:50:16+07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://egiathamaershada.github.io/blog/tags/markdown/</loc>
-    <lastmod>2018-08-03T22:50:16+07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://egiathamaershada.github.io/blog/tags/mathjax/</loc>
-    <lastmod>2018-08-03T22:50:16+07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://egiathamaershada.github.io/blog/tags/pandoc/</loc>
-    <lastmod>2018-08-03T22:50:16+07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://egiathamaershada.github.io/blog/tags/rstudio/</loc>
-    <lastmod>2018-08-03T22:50:16+07:00</lastmod>
+    <loc>https://egiathamaershada.github.io/blog/categories/golang/</loc>
+    <lastmod>2018-08-04T20:29:54+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://egiathamaershada.github.io/blog/tags/</loc>
-    <lastmod>2018-08-03T22:50:16+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://egiathamaershada.github.io/blog/tags/test/</loc>
+    <lastmod>2018-08-04T20:29:54+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://egiathamaershada.github.io/blog/</loc>
-    <lastmod>2018-08-04T17:09:47+07:00</lastmod>
+    <lastmod>2018-08-04T20:29:54+07:00</lastmod>
   </url>
   
 </urlset>

@@ -1,44 +1,21 @@
-body, p,
+html, body {
+    background-color: #f0f0f0;
+}
+
 .e-text-primary,
-.e-text-banner, .e-text-banner span 
-.e-text-banner-small, .e-text-banner-small span,
-.e-index-menu {
-    font-family: 'Montserrat' , 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+p, span, div,
+pre, code,
+html, body
+{
+    font-family: apple-system,BlinkMacSystemFont, 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
+.e-text-secondary,
 h1, h2, h3, h4, h5, h6,
-a, div, span, blockquote,
-.e-text-secondary {
-    font-family: 'Quicksand' , Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-}
-
-.e-list-link {
-    font-size: 1.5rem;
-}
-
-.e-list-border {
-    box-sizing: border-box;
-    border: 2px solid #252525;
-}
-.e-card {
-    box-sizing: border-box;
-    border: 2px solid #252525;
-}
-.e-list-border.uk-light, .e-card.uk-light {
-    border-color: #fff;
-}
-.e-card-photo {
-    box-sizing: border-box;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-.e-menu {
-    font-size: 2rem;
-}
-
-.e-button-menu {
-    background-color: rgba(193, 193, 193, 0.5);
-    border: none;
+blockquote
+/* #post h1, #post h2, #post h3, #post h4, #post h5, #post h6, */
+{
+    font-family: 'Quicksand', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
 }
 
 .e-text-banner {
@@ -49,19 +26,50 @@ a, div, span, blockquote,
     font-size: 5rem;
 }
 
-.e-red {
-    color: #ea193a;
+.e-text-banner-smaller {
+    font-size: 3rem;
 }
+
+.e-text-light {
+    color: #f0f0f0;
+}
+
 .e-background-dark {
     background-color: #252525;
 }
 
-pre.chroma {
+.e-red {
+    color: #ea193a;
+}
+
+.e-button-menu {
+    background-color: rgba(163, 163, 163, 0.3);
     border: none;
 }
 
-#post iframe,
-#post img {
-    display: block !important;
-    margin: 0 auto !important;
+.e-list-link {
+    font-size: 1.5rem;
+}
+
+
+.e-list-border {
+    box-sizing: border-box;
+    border: 2px solid #f0f0f0;
+}
+
+.e-card {
+    box-sizing: border-box;
+    border: 2px solid #f0f0f0;
+}
+
+.e-padding-xsmall {
+    padding: .2rem;
+}
+
+.e-margin-xsmall {
+    margin: .2rem;
+}
+
+.e-display-inline-block {
+    display: inline-block;
 }
