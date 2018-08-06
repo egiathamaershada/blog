@@ -35,10 +35,12 @@
 
 
 
-
     
     
-        <meta property="og:image" content="https://egiathamaershada.github.io/blog/images/gobloging-grafana-test-memory.jpg" />
+        
+        
+            <meta property="og:image" content="https://egiathamaershada.github.io/blog/images/gobloging-grafana-test-memory.jpg" />
+        
     
 <meta property="og:title" content="mengenal &#34;gobloging&#34; dan static site generator menggunakan gohugo" />
 <meta property="og:description" content="Gobloging, bloging menggunakan Go. Memanfaatkan gohugo Go static site generator, The world’s fastest framework for building websites" />
@@ -67,7 +69,7 @@
 
 <meta itemprop="datePublished" content="2018-08-04T20:29:54&#43;07:00" />
 <meta itemprop="dateModified" content="2018-08-04T20:29:54&#43;07:00" />
-<meta itemprop="wordCount" content="926">
+<meta itemprop="wordCount" content="937">
 
 
 
@@ -158,7 +160,13 @@
 <li>Halaman static website berupa artikel sederhana (artikel ini tanpa pengujian dan kesimpulan) yang berukuran <strong>11.96 KB (12,244 bytes)</strong></li>
 <li>Halaman web wordpress hanya hello word &ldquo;sisa&rdquo; install yang berukuran <strong>19.76 KB (20,231 bytes)</strong></li>
 <li>wrk dijalankan dari server dengan <strong>CPU 2 GHz dan memory 2GB</strong></li>
-<li>web berada di server dengan <strong>CPU 2GHz dan memory 4GB</strong></li>
+<li>web berada di server dengan spesifikasi VPS KVM <a href="http://cloudkilat.com/">Cloudkilat</a>
+
+<ul>
+<li><a href="https://ark.intel.com/products/120474/Intel-Xeon-Gold-5120-Processor-19_25M-Cache-2_20-GHz">CPU Intel Xeon Gold 5120</a></li>
+<li>RAM 4GB</li>
+<li><a href="https://www.samsung.com/semiconductor/minisite/ssd/product/enterprise/sm863a/">SSD</a> Raid 10 write intensive</li>
+</ul></li>
 <li>Pengujian dijalankan <strong>satu per satu</strong></li>
 <li>Selama pengujian wordpress dan static website tetap berjalan</li>
 <li>Selama pengujian ada aplikasi background tetap berjalan</li>
